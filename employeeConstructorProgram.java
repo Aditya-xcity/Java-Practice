@@ -10,6 +10,68 @@ import java.util.Scanner;
 
 class EmployeeInfo
 {
+    String employeeName;
+    int employeeId;
+    int salary;
+
+    EmployeeInfo()
+    {
+        this.employeeName = "Unknown";
+        this.employeeId = 0;
+        this.salary = 0;
+    }
+
+    EmployeeInfo(String employeeName, int employeeId, int salary)
+    {
+        this.employeeName = employeeName;
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+
+    void printDetails()
+    {
+        System.out.println("Employee Name: " + employeeName);
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Salary: " + salary);
+    }
+}
+
+public class employeeConstructorProgram
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String employeeName;
+        int employeeId;
+        int salary;
+
+        System.out.println("Enter employee name:");
+        employeeName = sc.nextLine();
+        System.out.println("Enter employee id:");
+        employeeId = sc.nextInt();
+        System.out.println("Enter salary:");
+        salary = sc.nextInt();
+
+        EmployeeInfo e1 = new EmployeeInfo();
+        EmployeeInfo e2 = new EmployeeInfo(employeeName, employeeId, salary);
+
+        System.out.println("Default Constructor:");
+        e1.printDetails();
+        System.out.println("Parameterized Constructor:");
+        e2.printDetails();
+    }
+}/*
+Name - ADITYA BHARDWAJ
+Section - D2
+Roll No - 07
+Course – B TECH
+Branch – CSE
+*/
+
+import java.util.Scanner;
+
+class EmployeeInfo
+{
     String name;
     int id;
     int salary;
